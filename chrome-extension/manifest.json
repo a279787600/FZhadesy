@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Borderless Image/Video Viewer",
+  "version": "0.1.0",
+  "description": "Borderless viewing of images and videos with zoom, rotate, flip, and pan.",
+  "permissions": ["scripting", "activeTab", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Borderless Viewer" },
+  "icons": {
+    "128": "icons/icon512.png",
+    "512": "icons/icon512.png"
+  }
+}

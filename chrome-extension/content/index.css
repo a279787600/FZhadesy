@@ -1,0 +1,50 @@
+:root {
+  --bv-bg: rgba(0,0,0,0.92);
+  --bv-fg: #f1f5f9;
+  --bv-accent: #60a5fa;
+}
+
+#bv-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bv-bg);
+  z-index: 2147483647;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+#bv-overlay.bv-visible { display: flex; }
+#bv-overlay.bv-dragging { cursor: grabbing; }
+
+#bv-stage {
+  position: relative;
+  transform-origin: center center;
+  will-change: transform;
+  max-width: none;
+  max-height: none;
+}
+
+#bv-media {
+  max-width: none !important;
+  max-height: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  user-select: none;
+  pointer-events: none; /* pan via stage */
+}
+
+#bv-hint {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--bv-fg);
+  font: 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  pointer-events: none;
+}
